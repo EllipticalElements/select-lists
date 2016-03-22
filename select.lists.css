@@ -1,0 +1,48 @@
+state-select, country-select {
+  position: relative;
+  min-width: 18.625em;
+  padding: .4em 1em;
+  border-radius: 5px;
+  display: inline-block;
+  line-height: 1.5;
+  margin: 0 0 1em 0; }
+  state-select.expand, state-select.ui-expand, country-select.expand, country-select.ui-expand {
+    width: 100%; }
+  state-select > select, country-select > select {
+    -webkit-appearance: none;
+    -moz-appearance: window;
+    font-size: 1em;
+    line-height: 1;
+    background: transparent;
+    border: 0;
+    text-shadow: none !important;
+    outline: none;
+    font-weight: normal; }
+    state-select > select option, country-select > select option {
+      color: #000; }
+  state-select ::-ms-expand, country-select ::-ms-expand {
+    display: none; }
+  state-select:after, country-select:after {
+    content: "\e903";
+    font-family: elliptical;
+    font-size: 1em;
+    position: absolute;
+    right: 0.6em;
+    top: 0.7em;
+    line-height: 1;
+    pointer-events: none; }
+  @media only screen and (max-width: 450px) {
+    state-select > select, country-select > select {
+      font-size: 0.8em; }
+    state-select:after, country-select:after {
+      font-size: 0.8em;
+      top: 1em; } }
+
+@-moz-document url-prefix() {
+  state-select select, country-select select {
+    text-overflow: '';
+    text-indent: .1em; } }
+
+@media only screen and (max-width: 640px) {
+  state-select, country-select {
+    width: 90%; } }

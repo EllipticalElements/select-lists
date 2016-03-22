@@ -1,0 +1,49 @@
+{
+  "name": "select-lists",
+  "version": "1.0.0",
+  "authors": [
+    "S. Francis"
+  ],
+  "description": "state and country select list web components",
+  "keywords": [
+    "web-component",
+    "polymer",
+    "state select list",
+    "country select list"
+  ],
+  "main": "state-select.html",
+  "license": "MIT",
+  "homepage": "https://github.com/EllipticalElements/select-lists/",
+  "ignore": [
+    "/.*",
+    "/test/",
+    "/demo/",
+    ".gitignore",
+    ".npmignore",
+    "gulpfile.js",
+    "lib",
+    "docs",
+    "index.js",
+    "umd.js",
+    "package.json",
+    "demo",
+    "build.json",
+    "bundle.json",
+    ".nvmrc",
+    ".eslintrc",
+    "bin",
+    "CHANGELOG.md",
+    "demos",
+    "stylesheets",
+    "_index.scss",
+    "bk"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0",
+    "elliptical-polymer-behaviors": "~1.0.11"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "web-component-tester": "*"
+  }
+}
