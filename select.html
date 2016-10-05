@@ -1,0 +1,80 @@
+<dom-module id="ui-select">
+    <template>
+      <content></content>
+    </template>
+</dom-module>
+
+
+<script>
+    Polymer({
+        is:'ui-select',
+        behaviors:[Elliptical.ComponentBehavior],
+        properties:{
+            dataId:{
+                type:String,
+                value:null
+            },
+            dataName:{
+                type:String,
+                value:null
+            },
+            dataValue:{
+                type:String,
+                value:null
+            }
+        },
+
+        ready:function(){
+            this._setValueProp();
+            this._setId();
+            this._setName();
+            this._setValue();
+            this._setListener();
+
+        },
+
+        _setValueProp:function(){
+            var element=this.element;
+            var node=this;
+            Object.defineProperty(node, 'value', {
+                get: function() { return element.find('select').val(); },
+                set: function(newValue) { element.find('select').val(newValue); },
+                enumerable: true,
+                configurable: true
+            });
+        },
+
+        _setId:function(){
+            if(this.dataId){
+                var select=this.element.find('select');
+                select.attr('id',this.dataId);
+            }
+        },
+
+        _setName:function(){
+            if(this.dataName){
+                var select=this.element.find('select');
+                select.attr('name',this.dataName);
+            }
+        },
+
+        _setValue:function(){
+            if(this.dataValue){
+                this.value=this.dataValue;
+            }
+        },
+
+        _setListener:function(){
+            this._event(this.element,'change','select',this._onChange.bind(this));
+        },
+
+        _onChange:function(){
+            var data={
+                value:this.value,
+                id:this.dataId,
+                name:this.dataName
+            };
+            this.fire('ui-select-change',data);
+        }
+    });
+</script>

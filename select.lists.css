@@ -1,4 +1,4 @@
-state-select, country-select {
+ui-select,state-select, country-select {
   position: relative;
   min-width: 18.625em;
   padding: .4em 1em;

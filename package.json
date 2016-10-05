@@ -1,7 +1,7 @@
 {
   "name": "select-lists",
   "description": "state and country select list web components",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": "S. Francis",
   "license": "MIT",
   "repository": {
